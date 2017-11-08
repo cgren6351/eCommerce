@@ -1,0 +1,93 @@
+<!doctype>
+<html>
+    <head>
+        <title>Milly's art shop</title>
+
+        <script>
+            function calculate(amount){
+                var output = document.getElementById("output");
+                var subtotal = document.getElementById("subtotal");
+                var Q1 = document.getElementById("Q1");
+                var Q2 = document.getElementById("Q2");
+                var Q3 = document.getElementById("Q3");
+                var Q4 = document.getElementById("Q4");
+                var trate = parseFloat(subtotal.value) * 0.0875;
+                subtotal = parseFloat(Q1.value) * parseFloat(Q2.value) * parseFloat(Q3.value) * parseFloat(Q4.value);
+                var rprice1 = 4.99;
+                var rprice2 = 2.99;
+                var rprice3 = 9.99;
+                var rprice4 = 2.00;
+                var shipping = parseFloat(1.00);
+                var total = subtotal + trate + shipping;
+                var build = "";
+                build += "Total items \n";
+                build += Q1 + Q2 + Q3 + Q4 + "\n";
+
+            }
+            <p> {
+                background-color: lightblue;
+            }
+
+        </script>
+        </head>
+
+        <body>
+            <div>
+                <h2> Brushes </h2>
+                <img src = "paintbrushes.jpg">
+                <span> $4.99 </span>
+                <p>
+                    Quality brushes
+                </p>
+                <input id = "quantity1" type = "text">
+                <button>
+                    Add to cart
+                </button>
+            </div>
+
+            <div>
+                <h2> Markers </h2>
+                <img src = "markers.jpg">
+                <span> $2.99 </span>
+                <p>
+                    Some great markers right here
+                </p>
+                <input id = "quantity2" type = "text">
+                <button>
+                    Add to cart
+                </button>
+            </div>
+
+            <div>
+                <h2> Sketch book </h2>
+                <img src = "sketchbook.jpg">
+                <span> $9.99 </span>
+                <p>
+                    Paper made from rare amzalachian trees
+                </p>
+                <input id = "quantity3" type = "text">
+                <button>
+                    Add to cart
+                </button>
+            </div>
+
+            <div>
+                <h2> Water color paint </h2>
+                <img src = "watercolor.jpg">
+                <span> $2.00 </span>
+                <p>
+                    an arrangment of colors
+                </p>
+                <input id = "quantity4" type = "text">
+                <button>
+                    Add to cart
+                </button>
+            </div>
+
+            <button id = "output">
+                Purchase
+            </button>
+            <div id = "calculate">
+            </div>
+        </body>
+</html>
