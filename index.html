@@ -1,0 +1,130 @@
+<!doctype>
+<html>
+    <head>
+        <title>Milly's art shop</title>
+
+        <style>
+            body{
+                background-color:peachpuff;
+        }
+            h2{
+            font-size: 30pt;
+        }
+            img{
+            width:300px;
+        }
+            h2{
+            font-size: 30pt;
+        }
+            img{
+            width:300px;
+        }
+            h2{
+            font-size: 30pt;
+        }
+            h2{
+            font-size: 30pt;
+        }
+        *{
+            font-family: "comic sans ms"
+        }
+        </style>
+
+        <script>
+            function calculate(){
+                var output = document.getElementById("output");
+                var Q1 = document.getElementById("Q1");
+                var Q2 = document.getElementById("Q2");
+                var Q3 = document.getElementById("Q3");
+                var Q4 = document.getElementById("Q4");
+
+                var wsale1 = 2.00;
+                var wsale2 = 4.00;
+                var wsale3 = 5.00;
+                var wsale4 = 4.00;
+
+                var rprice1 = 5.00;
+                var rprice2 = 8.00;
+                var rprice3 = 15.00;
+                var rprice4 = 6.00;
+
+                var subtotal = ((rprice1 * Q1.value) + (rprice2 * Q2.value) + (rprice3 * Q3.value) + (rprice4 * Q4.value));
+                var trate = parseFloat(subtotal.value) * 0.0875;       
+                var profit = ((rprice1 * Q1.value) + (rprice2 * Q2.value) + (rprice3 * Q3.value) + (rprice4 * Q4.value)) - ((wsale1 * Q1.value) + (wsale2 * Q2.value) + (wsale3 * Q3.value) + (wsale4 * Q4.value)) ;
+                var shipping = 1.00;
+
+                var total = (subtotal) + (trate) + (shipping);
+                
+                var build = "";
+                build += "The price is " + total;
+                build += "Total items \n";
+                
+                output.innerHTML = build;
+            }
+        </script>
+        </head>
+
+        <body>
+            <div align = "center">
+            <div>
+            
+                <h2> Brushes </h2>
+                <img src = "paintbrushes.jpg">
+                <span> $5.00 </span>
+                <p>
+                    Quality brushes
+                </p>
+                <input id = "quantity1" type = "text">
+                <button onclick = "calculate()">
+                    Add to cart
+                </button>
+            </div>
+
+            <div>
+                <h2> Markers </h2>
+                <img src = "markers.jpg">
+                <span> $8.00 </span>
+                <p>
+                    Some great markers right here
+                </p>
+                <input id = "quantity2" type = "text">
+                <button onclick = "calculate()">
+                    Add to cart
+                </button>
+            </div>
+
+            <div>
+                <h2> Sketch book </h2>
+                <img src = "sketchbook.jpg">
+                <span> $15.00 </span>
+                <p>
+                    Paper made from rare amzalachian trees
+                </p>
+                <input id = "quantity3" type = "text">
+                <button onclick = "calculate()">
+                    Add to cart
+                </button>
+            </div>
+
+            <div>
+                <h2> Water color paint </h2>
+                <img src = "watercolor.jpg">
+                <span> $6.00 </span>
+                <p>
+                    An arrangment of colors
+                </p>
+                <input id = "quantity4" type = "text">
+                <button onclick = "calculate()">
+                    Add to cart
+                </button>
+            </div>
+
+            <div id = "output" >
+            <h3> Checkout </h3>
+            <button onclick = "calculate()">
+                Purchase
+            </button>
+            </div>
+
+        </body>
+</html>
